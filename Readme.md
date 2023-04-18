@@ -7,6 +7,9 @@ Microsoft.EntityFrameworkCore.SqlServer
 
 Microsoft.EntityFrameworkCore.Tools
 
+##photoUpload
+CloudinaryDotNet
+
 
 #PM
 *create dabase in SSMS, copy connettion string...
