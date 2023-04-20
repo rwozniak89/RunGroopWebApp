@@ -7,6 +7,8 @@ Microsoft.EntityFrameworkCore.SqlServer
 
 Microsoft.EntityFrameworkCore.Tools
 
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+
 ##photoUpload
 CloudinaryDotNet
 
