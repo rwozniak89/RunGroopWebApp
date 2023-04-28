@@ -41,18 +41,45 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
 
-                        <li class="nav-item">
+                       @* <li class="nav-item">
                             @*<a asp-area="" asp-controller="Account" asp-action="Register">Sign up</a>
                             <span>&nbsp;or&nbsp;</span>*@
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                          @*  <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item">*@
                             @*<a asp-area="" asp-controller="Account" asp-action="Register">Sign up</a>
                             <span>&nbsp;or&nbsp;</span>*@
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
-                        </li>
+                          @*  <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                        </li>*@
+                          @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard"
+                                asp-action="Index">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <form asp-area="" asp-controller="Account" asp-action="Logout">
+                                    <button class="btn btn-outline-danger">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account"
+                                asp-action="Login">Login</a>
+                         </li>
+                         <li class="nav-item">
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account"
+                                asp-action="Register">Register</a>
+                         </li>
+                            
+                        }
                     </ul>
-                     @if (SignInManager.IsSignedIn(User))
+                   
+                     @*@if (SignInManager.IsSignedIn(User))
                         {
                             <ul class="navbar-nav">
                                 <li class="nav-item dropdown">
@@ -66,7 +93,7 @@
                                             <img alt="Image" src="/img/avatar-male-4.jpg" class="avatar avatar-xs">
                                         }
                                     </a>*@
-                                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                    @*<div class="dropdown-menu" aria-labelledby="pagesDropdown">
                                         <a class="dropdown-item" asp-controller="User" asp-action="Detail" asp-route-id="@currentUser.Id">
                                             <span class="h6 mb-0">View Profile</span>
                                         </a>
@@ -95,12 +122,12 @@
                         {
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a asp-area="" asp-controller="Account" asp-action="Register">Sign up</a>
+                                    <a asp-area="" asp-controller="Account" asp-action="Register">Sign up1</a>
                                     <span>&nbsp;or&nbsp;</span>
-                                    <a asp-area="" asp-controller="Account" asp-action="Login">Sign in</a>
+                                    <a asp-area="" asp-controller="Account" asp-action="Login">Sign in1</a>
                                 </li>
                             </ul>
-                        }
+                        }*@
 
                 </div>
             </div>
