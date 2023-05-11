@@ -44,7 +44,7 @@ namespace RunGroopWebApp.Repository
 
         public async Task<Race?> GetByIdAsyncNoTracking(int id)
         {
-            return await _context.Races.Include(i => i.Address).AsNoTracking().FirstOrDefaultAsync();
+            return await _context.Races.Include(i => i.Address).AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<int> GetCountAsync()
