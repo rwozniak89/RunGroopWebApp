@@ -25,7 +25,7 @@ PS C:\Projects\RunGroopWebApp> cd .\RunGroopWebApp\
 PS C:\Projects\RunGroopWebApp\RunGroopWebApp> dotnet run seeddata
 
 #or https://marketplace.visualstudio.com/items?itemName=AdamRDriscoll.PowerShellToolsVS2022
-download and install
+download and install, and VIEW -> Terminal, i jest!
 
 ## ppm(right click) on project and then "open in terminal"
 PS C:\Projects\RunGroopWebApp\RunGroopWebApp> dotnet run seeddata
